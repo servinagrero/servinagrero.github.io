@@ -3,8 +3,9 @@ function jsRandom(min, max) {
 }
 
 document.addEventListener('DOMContentLoaded', () => {
-    src = `./images/clifford-${jsRandom(1, 49)}-resized.png`;
-  document.getElementById('img-entry').src = src;
+    img = document.getElementById('img-entry');
+    img.src = `./images/clifford-${jsRandom(1, 49)}-resized.png`;
+    img.style.opacity = 1;
 });
 
 

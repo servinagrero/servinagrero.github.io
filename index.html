@@ -12,6 +12,17 @@
   <script src="p5.min.js"></script>
   <script src="main.js"></script>
   <link rel="stylesheet" href="main.css">
+
+  <style>
+.easeload{
+    opacity: 0;
+    -webkit-transition: all 2s ease; 
+    -moz-transition: all 2s ease; 
+    -ms-transition: all 2s ease; 
+    -o-transition: all 2s ease; 
+}
+  </style>
+  
 </head>
 <body>
 <section>
@@ -27,7 +38,7 @@
   <!-- <canvas id="mainCanvas"></canvas> -->
 
   <figure id="main-figure">
-      <img id="img-entry" src="./images/clifford-0.png" onload="loadImage()">
+      <img class="easeload" id="img-entry" src="./images/clifford-0.png" onload="loadImage()">
   </figure>
 
   <nav>
