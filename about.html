@@ -8,32 +8,53 @@
       content="width=device-width, initial-scale=1, maximum-scale=1"
     />
 
-    <title>Personal Webpage</title>
+    <title>About me</title>
 
     <link rel="stylesheet" href="static/css/skelet.min.css" />
     <link rel="stylesheet" href="static/css/main.css" />
-    
   </head>
   <body>
     <div id="app">
       <main>
         <x-grid columns="8">
           <x-col span="row">
-            <div class="logo">Sergio Vinagrero</div>
+            <div class="logo">About me</div>
           </x-col>
         </x-grid>
+
         <span class="space"></span>
 
         <div>
-          <a href="about.html" class="button">About</a>
+          <a href="index.html" class="button">Index</a>
           <!-- <a href="about.html" class="button">Projects</a> -->
           <!-- <a href="about.html" class="button">Art</a> -->
           <!-- <a href="about.html" class="button">Music</a> -->
         </div>
 
         <span class="space"></span>
-        <img src="static/noise_flow.jpg" id="img-entry" />
+
+        <x-grid columns="4" columns-s="3">
+          <x-col span="1+2" span-s="1"
+            ><img src="./static/grafiti.jpg" style="width: 95%"
+          /></x-col>
+          <x-col span="2">
+            <p>
+              My name is Sergio Vinagrero and I was born in 1998 Madrid, Spain.
+            </p>
+          </x-col>
+        </x-grid>
+
+        <span class="space"></span>
+
+        <!-- <x-grid columns="4"> -->
+        <!--   <x-col></x-col> -->
+        <!--   <x-col></x-col> -->
+        <!--   <x-col></x-col> -->
+        <!--   <x-col></x-col> -->
+        <!-- </x-grid> -->
+	
       </main>
+
       <footer class="text-end">
         <a href="https://github.com/servinagrero" class="button is-white"
           >Github</a

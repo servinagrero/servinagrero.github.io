@@ -1,0 +1,102 @@
+@use "sass:math"
+
+@import url('https://fonts.googleapis.com/css2?family=Inter&display=swap')
+
+$color-highlight: #BC484A
+$color-main: #F2E8CF
+$fontSize: calc(100vw / 90)
+$hHeading: 5rem
+$siteMarg: 3rem
+
+span[class*="space"]
+  display: block
+  width: 100%
+  margin: 3rem auto
+
+#app
+  padding: $siteMarg
+  max-width: 95vw
+  margin: 0 auto
+
+.logo
+  color: $color-highlight
+  font-size: $hHeading
+  letter-spacing: 0
+  line-height: 1
+  font-weight: 800
+  margin: auto
+
+*,
+*::before,
+*::after
+  font-family: "Inter", sans serif
+  box-sizing: border-box
+  margin: 0
+  padding: 0
+  background: $color-main
+
+html 
+  scroll-behavior: smooth
+  overflow-y: auto
+
+body
+  background: $color-main
+  animation: fadeInAnimation ease 1.5s
+  animation-iteration-count: 1
+  animation-fill-mode: forwards
+
+h1 
+  font-family: "Inter", serif
+  font-weight: 400
+  margin-top: 1px
+  text-align: center
+  font-size: 1.5rem
+
+h2, h3 
+  font-family: "Inter", serif !important
+  font-weight: bold 
+
+a
+  /* text-decoration: none
+  /* color: $color-highlight
+  /* border-bottom: 2px solid $color-highlight
+  &:hover
+    text-decoration: none
+    /* border-bottom: none
+    /* color: white
+    background: $color-highlight
+
+#img-entry
+  display: block
+  margin: auto
+  vertical-align: middle
+  max-width: 90vw
+
+img.logo 
+  width: 28px 
+
+@keyframes fadeInAnimation 
+  0% 
+    opacity: 0
+  
+  100% 
+    opacity: 1 
+
+/* .button
+/*   border-radius: 2px
+/*   background: $color-main
+
+.button
+  border-bottom: 2px solid $color-highlight
+  border-radius: 0px
+  font-size: 16px
+  background: $color-main
+  color: $color-highlight
+  &:hover
+    color: black
+    background: $color-main
+
+p
+  font-size: 1.45rem
+  font-weight: 100
+  color: #1A1410

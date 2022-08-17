@@ -1,0 +1,110 @@
+@import url("https://fonts.googleapis.com/css2?family=Inter&display=swap");
+span[class*=space] {
+  display: block;
+  width: 100%;
+  margin: 3rem auto;
+}
+
+#app {
+  padding: 3rem;
+  max-width: 95vw;
+  margin: 0 auto;
+}
+
+.logo {
+  color: #BC484A;
+  font-size: 5rem;
+  letter-spacing: 0;
+  line-height: 1;
+  font-weight: 800;
+  margin: auto;
+}
+
+*,
+*::before,
+*::after {
+  font-family: "Inter", sans serif;
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+  background: #F2E8CF;
+}
+
+html {
+  scroll-behavior: smooth;
+  overflow-y: auto;
+}
+
+body {
+  background: #F2E8CF;
+  animation: fadeInAnimation ease 1.5s;
+  animation-iteration-count: 1;
+  animation-fill-mode: forwards;
+}
+
+h1 {
+  font-family: "Inter", serif;
+  font-weight: 400;
+  margin-top: 1px;
+  text-align: center;
+  font-size: 1.5rem;
+}
+
+h2, h3 {
+  font-family: "Inter", serif !important;
+  font-weight: bold;
+}
+
+a {
+  /* text-decoration: none */
+  /* color: $color-highlight */
+  /* border-bottom: 2px solid $color-highlight */
+}
+a:hover {
+  text-decoration: none;
+  /* border-bottom: none */
+  /* color: white */
+  background: #BC484A;
+}
+
+#img-entry {
+  display: block;
+  margin: auto;
+  vertical-align: middle;
+  max-width: 90vw;
+}
+
+img.logo {
+  width: 28px;
+}
+
+@keyframes fadeInAnimation {
+  0% {
+    opacity: 0;
+  }
+  100% {
+    opacity: 1;
+  }
+}
+/* .button */
+/*   border-radius: 2px */
+/*   background: $color-main */
+.button {
+  border-bottom: 2px solid #BC484A;
+  border-radius: 0px;
+  font-size: 16px;
+  background: #F2E8CF;
+  color: #BC484A;
+}
+.button:hover {
+  color: black;
+  background: #F2E8CF;
+}
+
+p {
+  font-size: 1.45rem;
+  font-weight: 100;
+  color: #1A1410;
+}
+
+/*# sourceMappingURL=main.css.map */
