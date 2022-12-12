@@ -12,35 +12,41 @@
 
     <link rel="stylesheet" href="static/css/skelet.min.css" />
     <link rel="stylesheet" href="static/css/main.css" />
-    
   </head>
   <body>
     <div id="app">
       <main>
-        <x-grid columns="8">
-          <x-col span="row">
-            <div class="logo">Sergio Vinagrero</div>
+        <span class="space"></span>
+        <x-grid columns="2">
+          <x-col span="1" span-s="row">
+            <img id="portrait" src="images/portrait_resized.png" alt="portrait"
+          /></x-col>
+          <x-col span="2-3" span-s="row">
+            <p>My name is Sergio Vinagrero Gutierrez</p>
+            <p>
+              I was born in Madrid, Spain but I am currently living in Grenoble,
+              France, where I am doing my PhD on Memristive-based Physical
+              Unclonable Functions and True Random Number Generators at
+              <a href="https://tima.univ-grenoble-alpes.fr/">TIMA Laboratory</a
+              >.
+            </p>
+            <p>
+              I like generative art and photograhy and I am currently learning
+              to play the piano.
+            </p>
+            <span class="space"></span>
+            <!-- <a href="about.html" class="button">About</a> -->
+            <a href="projects.html" class="button">Projects</a>
+            <!-- <a href="art.html" class="button">Art & Photography</a> -->
           </x-col>
         </x-grid>
-        <span class="space"></span>
-
-        <div>
-          <a href="about.html" class="button">About</a>
-          <!-- <a href="about.html" class="button">Projects</a> -->
-          <!-- <a href="about.html" class="button">Art</a> -->
-          <!-- <a href="about.html" class="button">Music</a> -->
-        </div>
 
         <span class="space"></span>
-        <img src="static/noise_flow.jpg" id="img-entry" />
-      </main>
-      <footer class="text-end">
+
         <a href="https://github.com/servinagrero" class="button is-white"
           >Github</a
         >
-        <a
-          href="https://www.linkedin.com/in/servinagrero"
-          class="button is-white"
+        <a href="https://www.linkedin.com/in/servinagrero" class="button"
           >LinkedIn</a
         >
         <a
@@ -51,7 +57,7 @@
         <a href="https://www.unsplash.com/servinagrero" class="button is-white"
           >Unsplash
         </a>
-      </footer>
+      </main>
     </div>
   </body>
 </html>

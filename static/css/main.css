@@ -1,83 +1,85 @@
 @import url("https://fonts.googleapis.com/css2?family=Inter&display=swap");
-span[class*=space] {
-  display: block;
-  width: 100%;
-  margin: 3rem auto;
-}
-
-#app {
-  padding: 3rem;
-  max-width: 95vw;
-  margin: 0 auto;
-}
-
-.logo {
-  color: #BC484A;
-  font-size: 5rem;
-  letter-spacing: 0;
-  line-height: 1;
-  font-weight: 800;
-  margin: auto;
+@import url("https://fonts.googleapis.com/css2?family=IBM+Plex+Mono&display=swap");
+:root {
+  --mono-font: Space Grotesk, JetBrains Mono, monospace;
+  --sans-font: Inter, sans;
 }
 
 *,
 *::before,
 *::after {
-  font-family: "Inter", sans serif;
+  font-size: 1.6rem;
+  color: #223843 !important;
+  font-family: var(--mono-font) !important;
   box-sizing: border-box;
   margin: 0;
   padding: 0;
-  background: #F2E8CF;
+  background: var(--color-main);
+}
+
+span[class*=space] {
+  display: block;
+  width: 60vw;
+  margin: 3rem auto;
+}
+
+#app {
+  padding: 4rem 0 4rem 0;
+  max-width: 60vw;
+  margin: 0 auto;
+}
+
+div#center {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  height: 75vh;
+}
+
+main {
+  padding: 2.5vh 0 2.5vh 0;
+}
+
+img#portrait {
+  padding: 1vw !important;
+}
+
+.logo {
+  font-size: 1.5rem;
+  letter-spacing: 0;
+  line-height: 1;
+  margin: auto;
 }
 
 html {
   scroll-behavior: smooth;
   overflow-y: auto;
+  background: #eff1f3;
 }
 
 body {
-  background: #F2E8CF;
+  background: var(--color-main);
   animation: fadeInAnimation ease 1.5s;
   animation-iteration-count: 1;
   animation-fill-mode: forwards;
 }
 
 h1 {
-  font-family: "Inter", serif;
-  font-weight: 400;
-  margin-top: 1px;
-  text-align: center;
-  font-size: 1.5rem;
+  font-size: 4rem;
+  margin-bottom: 5vh;
 }
 
-h2, h3 {
-  font-family: "Inter", serif !important;
-  font-weight: bold;
+h3 {
+  color: #f0a202 !important;
+  font-weight: 700 !important;
 }
 
-a {
-  /* text-decoration: none */
-  /* color: $color-highlight */
-  /* border-bottom: 2px solid $color-highlight */
+@media (max-width: 900px) {
+  #app {
+    padding: 5vw 0 5vw 0;
+    max-width: 70vw;
+  }
 }
-a:hover {
-  text-decoration: none;
-  /* border-bottom: none */
-  /* color: white */
-  background: #BC484A;
-}
-
-#img-entry {
-  display: block;
-  margin: auto;
-  vertical-align: middle;
-  max-width: 90vw;
-}
-
-img.logo {
-  width: 28px;
-}
-
 @keyframes fadeInAnimation {
   0% {
     opacity: 0;
@@ -86,25 +88,84 @@ img.logo {
     opacity: 1;
   }
 }
-/* .button */
-/*   border-radius: 2px */
-/*   background: $color-main */
 .button {
-  border-bottom: 2px solid #BC484A;
+  font-size: 1.5rem !important;
+  font-weight: 400 !important;
+  color: #223843;
+  border-bottom: 1px solid #223843;
   border-radius: 0px;
-  font-size: 16px;
-  background: #F2E8CF;
-  color: #BC484A;
+  background: #eff1f3;
+  color: #223843;
+  padding: 1rem 1.25rem 1rem 1.25rem !important;
 }
 .button:hover {
-  color: black;
-  background: #F2E8CF;
+  color: #f0a202 !important;
+  border-bottom: 1px solid #f0a202;
+}
+
+a:not(.button) {
+  text-decoration: none;
+  color: #f0a202 !important;
+}
+a:not(.button):hover {
+  font-weight: 700 !important;
+}
+
+div.project {
+  padding: 0 0 0 1vw;
+  margin-bottom: 10vh;
+}
+
+div.project-link {
+  margin: 1rem !important;
 }
 
 p {
-  font-size: 1.45rem;
-  font-weight: 100;
-  color: #1A1410;
+  font-family: var(--sans-font) !important;
+  text-align: justify;
+  margin: 1rem !important;
+}
+
+hr {
+  margin: 0 !important;
+  border: 0 !important;
+  background-color: #223843 !important;
+  height: 1px !important;
+}
+
+div.description {
+  padding: 0 0 0 15vw;
+  text-align: justify !important;
+}
+
+table {
+  width: 50vw !important;
+  border-collapse: collapse !important;
+  border-spacing: 0px !important;
+}
+
+table.metadata {
+  max-width: 49vw !important;
+  margin: 0 0 0 10vw !important;
+  border-collapse: collapse !important;
+  border-spacing: 0px !important;
+}
+
+td {
+  width: 20vw !important;
+  text-align: left !important;
+  border-top: 1px solid #223843 !important;
+  border-bottom: 1px solid #223843 !important;
+}
+td.type {
+  font-weight: 700 !important;
+}
+td.right {
+  text-align: right !important;
+}
+
+table tr td {
+  min-width: 100%;
 }
 
 /*# sourceMappingURL=main.css.map */

@@ -1,102 +1,155 @@
 @use "sass:math"
-
 @import url('https://fonts.googleapis.com/css2?family=Inter&display=swap')
+@import url('https://fonts.googleapis.com/css2?family=IBM+Plex+Mono&display=swap')
 
-$color-highlight: #BC484A
-$color-main: #F2E8CF
-$fontSize: calc(100vw / 90)
-$hHeading: 5rem
-$siteMarg: 3rem
+$backgroundColor: #eff1f3
+$textColor: #223843
+$accentColor: #f0a202
 
-span[class*="space"]
-  display: block
-  width: 100%
-  margin: 3rem auto
+$linkSize: 1.5rem
+$textSize: 1.6rem
+$hHeading: 4rem
+$siteMarg: 4rem
+$mainWidth: 60vw
 
-#app
-  padding: $siteMarg
-  max-width: 95vw
-  margin: 0 auto
-
-.logo
-  color: $color-highlight
-  font-size: $hHeading
-  letter-spacing: 0
-  line-height: 1
-  font-weight: 800
-  margin: auto
+:root
+    --mono-font: Space Grotesk, JetBrains Mono, monospace
+    --sans-font: Inter, sans
 
 *,
 *::before,
 *::after
-  font-family: "Inter", sans serif
+  font-size: $textSize
+  color: $textColor !important
+  font-family: var(--mono-font) !important
   box-sizing: border-box
   margin: 0
   padding: 0
-  background: $color-main
+  background: var(--color-main)
+
+span[class*="space"]
+  display: block
+  width: $mainWidth
+  margin: 3rem auto
+
+#app
+  padding: $siteMarg 0 $siteMarg 0
+  max-width: $mainWidth
+  margin: 0 auto
+  
+div#center
+  display: flex
+  align-items: center
+  justify-content: center
+  height: 75vh
+
+main
+  padding: 2.5vh 0 2.5vh 0
+
+img#portrait
+  padding: 1vw !important
+  
+.logo
+  font-size: $linkSize
+  letter-spacing: 0
+  line-height: 1
+  margin: auto
 
 html 
   scroll-behavior: smooth
   overflow-y: auto
+  background: $backgroundColor
 
 body
-  background: $color-main
+  background: var(--color-main)
   animation: fadeInAnimation ease 1.5s
   animation-iteration-count: 1
   animation-fill-mode: forwards
 
-h1 
-  font-family: "Inter", serif
-  font-weight: 400
-  margin-top: 1px
-  text-align: center
-  font-size: 1.5rem
+h1
+  font-size: $hHeading
+  margin-bottom: 5vh
 
-h2, h3 
-  font-family: "Inter", serif !important
-  font-weight: bold 
+h3
+  color: $accentColor !important
+  font-weight: 700 !important
 
-a
-  /* text-decoration: none
-  /* color: $color-highlight
-  /* border-bottom: 2px solid $color-highlight
-  &:hover
-    text-decoration: none
-    /* border-bottom: none
-    /* color: white
-    background: $color-highlight
-
-#img-entry
-  display: block
-  margin: auto
-  vertical-align: middle
-  max-width: 90vw
-
-img.logo 
-  width: 28px 
+@media (max-width: 900px)
+  #app
+    padding: 5vw 0 5vw 0
+    max-width: 70vw
 
 @keyframes fadeInAnimation 
   0% 
     opacity: 0
-  
   100% 
     opacity: 1 
 
-/* .button
-/*   border-radius: 2px
-/*   background: $color-main
-
 .button
-  border-bottom: 2px solid $color-highlight
+  font-size: $linkSize !important
+  font-weight: 400 !important
+  color: $textColor
+  border-bottom: 1px solid $textColor
   border-radius: 0px
-  font-size: 16px
-  background: $color-main
-  color: $color-highlight
+  background: $backgroundColor
+  color: $textColor
+  padding: 1rem 1.25rem 1rem 1.25rem !important
   &:hover
-    color: black
-    background: $color-main
+    color: $accentColor !important
+    border-bottom: 1px solid $accentColor
 
+a:not(.button)
+  text-decoration: none
+  color: $accentColor !important
+  &:hover
+    font-weight: 700 !important
+
+div.project
+  padding: 0 0 0 1vw
+  margin-bottom: 10vh
+
+div.project-link
+  margin: 1rem !important
+  
 p
-  font-size: 1.45rem
-  font-weight: 100
-  color: #1A1410
+ font-family: var(--sans-font) !important
+ text-align: justify
+ margin: 1rem !important
+ 
+
+hr
+  margin: 0 !important
+  border: 0 !important
+  background-color: $textColor !important
+  height: 1px !important
+  
+div.description
+  padding: 0 0 0 15vw
+  text-align: justify !important
+
+table
+  width: 50vw !important
+  border-collapse: collapse !important
+  border-spacing: 0px !important
+  
+table.metadata
+  max-width: calc($mainWidth - 11vw) !important
+  margin: 0 0 0 10vw !important
+  border-collapse: collapse !important
+  border-spacing: 0px !important
+
+td
+  width: 20vw !important
+  text-align: left !important
+  border-top: 1px solid $textColor !important
+  border-bottom: 1px solid $textColor !important
+
+  &.type
+    font-weight: 700 !important
+    
+  &.right
+    text-align: right !important
+
+table tr td
+  min-width: 100%
+

@@ -1,0 +1,14 @@
+["SRAM Platform"]
+link = "https://github.com/servinagrero/SRAMPlatform"
+started = "Oct 2020"
+description = """Platform for the automation of collecting memory samples of numerous micro-controllers and their subsequent storage for future analysis. The memory data gathered will then be used mainly for SRAM-based Physical Unclonable Functions (PUF) analysis, as it is normally very difficult to gather enough data for this type of analysis."""
+
+[Monaco]
+link = "https://github.com/servinagrero/monaco"
+started = "Nov 2021"
+description = """This script provides functionaly to perform Monte Carlo and complex parametric simulations. It is a loosely coupled framework in which the user defines how parameters are injected into a netlist and how it is simulated."""
+
+[Fenneq]
+link = "https://github.com/servinagrero/fenneq"
+started = "Feb 2022"
+description="""Framework in the spirit of Flask to create agents based on RabbitMQ."""
